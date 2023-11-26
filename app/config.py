@@ -25,10 +25,10 @@ class config(object):
             'linux-aarch64': ['/data/psiphon-tunnel-core/linux-aarch64', '/../storage/psiphon/psiphon-tunnel-core'],
         }
         self.system_machine_using_redsocks = [
-            'linux-x86_64'
+            'linux-aarch64'
         ]
         self.system_machine_using_multi_tunnel = [
-            'linux-x86_64'
+            'linux-aarch64'
         ]
 
         self.system_machine = sysconfig.get_platform()
