@@ -26,16 +26,6 @@ def main():
         app.log('This machine ({}) not available at this time!\n'.format(config.system_machine), color='[R1]')
         return
 
-    if config.system_machine in config.system_machine_using_redsocks and not config.user_is_superuser():
-        app.log('Please run "sudo -s" first! (don\'t use "sudo python3 app.py"!)\n', color='[R1]')
-        return
-
-    config.load()
-
-    if config.force_use_redsocks and not config.user_is_superuser():
-        app.log('Please run "sudo -s" first! (don\'t use "sudo python3 app.py"!)\n', color='[R1]')
-        return
-
     if arguments.multi_tunnel_enabled:
         config.multi_tunnel_enabled = True
 
